@@ -1,0 +1,9 @@
+TIPLITER2.0 Light exposure experiment 9/18/21
+6500cell/ml in glucose free media
+Starved 24hrs
+5min exposure every 20min at 3.2um/cm^2 intensity starting at frame 43 (t=13.33hrs)
+Imaging occurs immediately after exposure and lasts ~2min to image ~100 positions
+GFP with no gain and 1s exposure.
+
+Excel sheet details:
+Sheet1 is the compiled data and is in the first sheet slot, sheet2 (Reference) is a sheet I can use to back track and find the original cells the data is describing the intensity of. The first row labels the columns, the first column is set to 0 when the cells are being imaged without having been exposed to light and 1 when they are exposed prior to the image taken. The second column is time, starting at 0 and going up in 20min increments. Stacks are all cut short to 176 frames (58hrs) to avoid cell death or division in last hour of experiments interfering with tracking.
