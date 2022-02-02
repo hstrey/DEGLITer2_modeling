@@ -1,0 +1,88 @@
+% ****** Start of file langevin.tex ******
+%%
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%showpacs,preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-1}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{subcaption}
+\usepackage{float}
+%\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+\DeclareMathOperator\erf{erf}
+\DeclareMathOperator\erfc{erfc}
+\begin{document}
+
+\preprint{APS/123-QED}
+
+\title{Modeling of GFP expression in cells}
+
+\author{Helmut H. Strey}
+ \affiliation{Biomedical Engineering Department and Laufer Center for Physical and Quantitative Biology, Stony Brook University, Stony Brook NY 11794-5281.}%Lines break automatically or can be forced with \\
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+\begin{description}
+\item[PACS numbers]
+May be entered using the \verb+\pacs{#1}+ command.
+\end{description}
+\end{abstract}
+
+\pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
+                             % Classification Scheme.
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+%\tableofcontents
+\onecolumngrid
+\subsection{Introduction}
+
+
+\subsection{Dynamics of GPF production}
+We are considering three chemical species in this model: $mRNA \rightarrow GFP^{*} \rightarrow GFP$, where mRNA is the concentration of the GFP encoding messenger RNA, $GFP^{*}$ is the immature non-fluorecent green fluorescent protein, and $GFP$ is the mature fluorescent green fluorescent protein.
+The differential equations are:
+\begin{equation}
+	\begin{aligned}
+	dc_{mRNA} &= k_{base} - \delta c_{mRNA} \\
+	dc_{GFP^{*}} &= k_{trans} c_{mRNA} - k_{mature} c_{GFP^{*}}\\
+	dc_{GFP} &= k_{mature} c_{GFP^{*}}
+	\end{aligned}
+\end{equation}
+Here $k_{base}$ is the base mRNA production rate, $\delta$ is the mRNA decay rate, $k_{trans}$ is the translation rate from mRNA to $GFP^*$, and $k_{mature}$ is the GFP maturation rate.
+\begin{acknowledgments}
+
+\end{acknowledgments}
+
+\end{document}
